@@ -2,7 +2,7 @@
 
 # Latest Version:
 
-[![stars](https://img.shields.io/static/v1?label=latest-version&message=2.0.10&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK)
+[![stars](https://img.shields.io/static/v1?label=SDK&message=2.0.10&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK)
 [![license](https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo)](https://github.com/rzrasel/custom-icon-badges/blob/main/LICENSE?rgh-link-date=2021-08-09T18%3A10%3A26Z "license MIT")
 
 # shurjoPay(V2) Android SDK Integration
@@ -16,4 +16,4 @@
 
 # Integration and Installation
 
-Download the ```SDK``` from the following link and put it in the <kbd>app/libs</kbd> folder
+Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.0.10&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) <kbd>SDK</kbd> from this github and put it in the <kbd>app/libs</kbd> folder. Add <kbd>dependencies</kbd> to the <kbd>app-level</kbd> <kbd> build.gradle</kbd> file.
