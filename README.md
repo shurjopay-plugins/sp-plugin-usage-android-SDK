@@ -16,4 +16,4 @@
 
 # Integration and Installation
 
-Download the 'SDK' from the following link and put it in the <kbd>app/libs</kbd> folder
+Download the ```SDK``` from the following link and put it in the <kbd>app/libs</kbd> folder
