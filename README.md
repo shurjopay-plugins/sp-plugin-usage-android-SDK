@@ -12,3 +12,8 @@
 ### Integration documentation:
 
 [shurjoPay Online Payment API Integration Guide](https://docs.google.com/document/d/19J4HE0j873nBJqcN-uRBYYAa_qBA3p1XSY-jy2fwvEE/edit?usp=sharing)
+
+
+# Integration and Installation
+
+Download the 'SDK' from the following link and put it in the <kbd>app/libs</kbd> folder
