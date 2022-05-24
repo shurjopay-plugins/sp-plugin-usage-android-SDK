@@ -4,7 +4,6 @@
 
 [![stars](https://img.shields.io/static/v1?label=latest-version&message=2.0.10&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK)
 [![license](https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo)](https://github.com/rzrasel/custom-icon-badges/blob/main/LICENSE?rgh-link-date=2021-08-09T18%3A10%3A26Z "license MIT")
-[![discord](https://custom-icon-badges.herokuapp.com/discord/819650821314052106?color=7289DA&logo=comments&label=discord&logoColor=white)](https://discord.gg/fPrdqh3Zfu "Dev Pro Tips Discussion & Support Server")
 
 # shurjoPay(V2) Android SDK Integration
 
