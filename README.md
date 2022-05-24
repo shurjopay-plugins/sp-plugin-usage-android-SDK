@@ -1,4 +1,6 @@
 
+https://img.shields.io/static/v1?label=LABEL&message=MESSAGE&color=red
+
 # shurjoPay(V2) Android SDK Integration
 
 [shurjoPay V2 Android SDK Integration](https://docs.google.com/document/d/1JLxmR0zgIqx1HEuxp_lJaljvWypby7n54F7z35HXO74/edit?usp=sharing)
