@@ -16,4 +16,4 @@
 
 # Integration and Installation
 
-Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.0.10&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) <kbd>SDK</kbd> from this github and put it in the <kbd>app/libs</kbd> folder. Add <kbd>dependencies</kbd> to the <kbd>app-level</kbd> <kbd> build.gradle</kbd> file.
+Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.0.10&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) <kbd>SDK</kbd> from this github and put it in the <kbd>app/libs</kbd> folder. And add <kbd>dependencies</kbd> to the <kbd>app-level</kbd> <kbd> build.gradle</kbd> file.
