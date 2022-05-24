@@ -1,6 +1,6 @@
 
 
-Latest Version: [![stars](https://img.shields.io/static/v1?label=latest version&message=2.0.10&color=red)](https://img.shields.io/static/v1?label=LABEL&message=MESSAGE&color=red)
+[![stars](https://img.shields.io/static/v1?label=latest version&message=2.0.10&color=red)](https://img.shields.io/static/v1?label=LABEL&message=MESSAGE&color=red)
 
 # shurjoPay(V2) Android SDK Integration
 
