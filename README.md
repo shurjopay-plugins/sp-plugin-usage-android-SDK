@@ -18,8 +18,14 @@
 
 Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.1.1&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) `SDK` from this github and put it in the <kbd>app/libs</kbd> folder. And add `dependencies` to the `app-level` <kbd>build.gradle</kbd> file.
 
-### Request Data Model Setup:
+### Android AndroidManifest
+```git_android_manifest_xml
+<uses-permission android:name="android.permission.INTERNET"/>
 ```
+
+### Request Data Model Setup:
+```git_request_data_model_setup
+// TODO request data model setup
 val data = RequiredData(
     username,
     password,
