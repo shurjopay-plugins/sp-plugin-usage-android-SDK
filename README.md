@@ -19,11 +19,13 @@
 Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.1.1&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) `SDK` from this github and put it in the <kbd>app/libs</kbd> folder. And add `dependencies` to the `app-level` <kbd>build.gradle</kbd> file.
 
 ### Android AndroidManifest
+
 ```git_android_manifest_xml
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
 ### Request Data Model Setup:
+
 ```git_request_data_model_setup
 // TODO request data model setup
 val data = RequiredData(
@@ -52,3 +54,46 @@ val data = RequiredData(
     value4
 )
 ```
+
+### Response Listener Setup:
+
+```git_response_listener_setup
+// TODO response listener
+object : PaymentResultListener {
+    override fun onSuccess(transactionInfo: TransactionInfo?) {
+        Log.d(MainActivity.TAG, "onSuccess: transactionInfo = $transactionInfo")
+        Toast.makeText(
+            this@MainActivity, "onSuccess: transactionInfo = " +
+                    transactionInfo, Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onFailed(message: String?) {
+        Log.d(MainActivity.TAG, "onFailed: message = $message")
+        Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()
+    }
+}
+```
+
+### Payment Request Setup:
+
+```git_payment_request_setup
+// TODO payment request setup
+ShurjoPaySDK.instance?.makePayment(this, Constants.SDK_TYPE_SANDBOX, data,
+object : PaymentResultListener {
+    override fun onSuccess(transactionInfo: TransactionInfo?) {
+        Log.d(TAG, "onSuccess: transactionInfo = $transactionInfo")
+        Toast.makeText(
+            this@MainActivity, "onSuccess: transactionInfo = " +
+                    transactionInfo, Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onFailed(message: String?) {
+        Log.d(TAG, "onFailed: message = $message")
+        Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()
+    }
+})
+```
+
+shurjoPay SDK integration and installation
