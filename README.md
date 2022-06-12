@@ -17,3 +17,32 @@
 # Integration and Installation
 
 Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.1.1&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) `SDK` from this github and put it in the <kbd>app/libs</kbd> folder. And add `dependencies` to the `app-level` <kbd>build.gradle</kbd> file.
+
+### Request Data Model Setup:
+```
+val data = RequiredData(
+    username,
+    password,
+    prefix,
+    currency,
+    amount,
+    orderId,
+    discountAmount,
+    discPercent,
+    customerName,
+    customerPhone,
+    customerEmail,
+    customerAddress,
+    customerCity,
+    customerState,
+    customerPostcode,
+    customerCountry,
+    returnUrl,
+    cancelUrl,
+    clientIp,
+    value1,
+    value2,
+    value3,
+    value4
+)
+```
