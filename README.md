@@ -18,6 +18,7 @@
 
 Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.1.1&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) `SDK` from this github and put it in the <kbd>app/libs</kbd> folder. And add `dependencies` to the `app-level` <kbd>build.gradle</kbd> file.
 
+# How To Integrate shurjoPay(V2) Android SDK (Kotlin)
 
 ### Android Dependencies
 
@@ -110,5 +111,7 @@ object : PaymentResultListener {
     }
 })
 ```
+
+# How To Integrate shurjoPay(V2) Android SDK (Java)
 
 shurjoPay SDK integration and installation
