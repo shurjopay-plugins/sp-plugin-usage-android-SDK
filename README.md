@@ -18,6 +18,21 @@
 
 Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.1.1&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK) `SDK` from this github and put it in the <kbd>app/libs</kbd> folder. And add `dependencies` to the `app-level` <kbd>build.gradle</kbd> file.
 
+
+### Android Dependencies
+
+```git_android_dependencies
+implementation files("libs/sdk-name.aar")
+implementation "com.squareup.retrofit2:retrofit:version"
+implementation "com.squareup.retrofit2:converter-gson:version"
+```
+
+### Android Proguard
+
+```git_android_proguard
+-keep class com.shurjopay.sdk.v2.model.* {*;}
+```
+
 ### Android AndroidManifest
 
 ```git_android_manifest_xml
