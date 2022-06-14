@@ -8,7 +8,7 @@
 ### GIT Command
 ```git_command
 git init
-git remote add origin https://github.com/rzrasel/office-sm-flutter-shurjopay-sdk-v2.git
+git remote add origin https://github.com/shurjoPay-Plugins/Android-SDK.git
 git remote -v
 git fetch && git checkout master
 git add .
@@ -25,8 +25,6 @@ echo date("D", (time() + 6 * 60 * 60)) . "day " . date("F j, Y, G:i:s", (time() 
 ```
 
 Download the latest [![stars](https://img.shields.io/static/v1?label=SDK&message=2.1.1&color=red)](https://github.com/shurjoPay-Plugins/Android-SDK)
-
-`Android Studio MacBook Pro:` <kbd>d5N3zwFKoh1k6yVcMSmg2MuC060mkS-kghp_Ec7xmc</kbd>
 
 # shurjoPay(V2) Android SDK Integration
 
