@@ -86,10 +86,14 @@ object : PaymentResultListener {
                     errorSuccess.transactionInfo, Toast.LENGTH_LONG
         ).show()
     }
-
+    //
     override fun onFailed(errorSuccess: ErrorSuccess) {
         Log.d(TAG, "onFailed: message = ${errorSuccess.message}")
         Toast.makeText(this@MainActivity, errorSuccess.message, Toast.LENGTH_SHORT).show()
+    }
+    //
+    override fun onBackButtonListener(errorSuccess: ErrorSuccess): Boolean {
+        return true
     }
 }
 ```
