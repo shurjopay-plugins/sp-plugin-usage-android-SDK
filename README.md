@@ -182,4 +182,100 @@ object : PaymentResultListener {
 
 # How To Integrate shurjoPay(V2) Android SDK (Java)
 
+### Request Data Model Setup:
+
+```git_request_data_model_setup
+// TODO request data model setup
+RequiredData data = RequiredData(
+    username,
+    password,
+    prefix,
+    currency,
+    amount,
+    orderId,
+    discountAmount,
+    discPercent,
+    customerName,
+    customerPhone,
+    customerEmail,
+    customerAddress,
+    customerCity,
+    customerState,
+    customerPostcode,
+    customerCountry,
+    returnUrl,
+    cancelUrl,
+    clientIp,
+    value1,
+    value2,
+    value3,
+    value4
+)
+```
+
+### Response Listener Setup:
+
+```git_response_listener_setup
+// TODO response listener
+new PaymentResultListener() {
+    @Override
+    public void onSuccess(@NonNull ErrorSuccess errorSuccess) {
+        Toast.makeText(
+                context,
+                "onSuccess: transactionInfo = " + errorSuccess.getTransactionInfo(),
+                Toast.LENGTH_LONG
+        ).show();
+    }
+
+    @Override
+    public void onFailed(@NonNull ErrorSuccess errorSuccess) {
+        Toast.makeText(
+                context,
+                "onFailed: transactionInfo = " + errorSuccess.getMessage(),
+                Toast.LENGTH_LONG
+        ).show();
+    }
+
+    @Override
+    public boolean onBackButtonListener(@NonNull ErrorSuccess errorSuccess) {
+        return false;
+    }
+}
+```
+
+### Payment Request Setup:
+
+```git_payment_request_setup
+// TODO payment request setup
+ShurjoPaySDK.Companion.getInstance().makePayment(
+        this,
+        Constants.SDK_TYPE_LIVE,
+        data,
+        new PaymentResultListener() {
+            @Override
+            public void onSuccess(@NonNull ErrorSuccess errorSuccess) {
+                Toast.makeText(
+                        context,
+                        "onSuccess: transactionInfo = " + errorSuccess.getTransactionInfo(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+
+            @Override
+            public void onFailed(@NonNull ErrorSuccess errorSuccess) {
+                Toast.makeText(
+                        context,
+                        "onFailed: transactionInfo = " + errorSuccess.getMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+
+            @Override
+            public boolean onBackButtonListener(@NonNull ErrorSuccess errorSuccess) {
+                return false;
+            }
+        }
+);
+```
+
 shurjoPay SDK integration and installation
