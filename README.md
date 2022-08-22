@@ -80,6 +80,33 @@ val data = RequiredData(
 // TODO response listener
 object : PaymentResultListener {
     override fun onSuccess(errorSuccess: ErrorSuccess) {
+        Toast.makeText(
+            context,
+            "onSuccess: transactionInfo = " + errorSuccess.transactionInfo,
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onFailed(errorSuccess: ErrorSuccess) {
+        Toast.makeText(
+            context,
+            "onFailed: transactionInfo = " + errorSuccess.message,
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onBackButtonListener(errorSuccess: ErrorSuccess): Boolean {
+        return false
+    }
+}
+```
+
+Old version
+
+```git_response_listener_setup
+// TODO response listener
+object : PaymentResultListener {
+    override fun onSuccess(errorSuccess: ErrorSuccess) {
         Log.d(TAG, "onSuccess: transactionInfo = ${errorSuccess.transactionInfo}")
         Toast.makeText(
             this@MainActivity, "onSuccess: transactionInfo = " +
@@ -99,6 +126,37 @@ object : PaymentResultListener {
 ```
 
 ### Payment Request Setup:
+
+```git_payment_request_setup
+// TODO payment request setup
+ShurjoPaySDK.instance?.makePayment(
+this,
+Constants.SDK_TYPE_SANDBOX,
+data,
+object : PaymentResultListener {
+    override fun onSuccess(errorSuccess: ErrorSuccess) {
+        Toast.makeText(
+            context,
+            "onSuccess: transactionInfo = " + errorSuccess.transactionInfo,
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onFailed(errorSuccess: ErrorSuccess) {
+        Toast.makeText(
+            context,
+            "onFailed: transactionInfo = " + errorSuccess.message,
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onBackButtonListener(errorSuccess: ErrorSuccess): Boolean {
+        return false
+    }
+})
+```
+
+Old version
 
 ```git_payment_request_setup
 // TODO payment request setup
