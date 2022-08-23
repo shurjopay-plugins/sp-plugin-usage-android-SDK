@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentJavaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<WebView
+            android:id="@+id/sysWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="16dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="shurjoPay Payment"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Payment Amount"
+                app:boxBackgroundColor="@android:color/transparent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sysInTextPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:text="1"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sysBtnPayment"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Pay" />
+
+            <!--<Button
+                android:id="@+id/sysBtnPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pay" />-->
+        </LinearLayout>
+
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payment Amount"
+            app:expandedHintEnabled="false"
+            app:hintEnabled="true"
+            app:placeholderText="Amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DISAPPEARING PLACEHOLDER" />
+        </com.google.android.material.textfield.TextInputLayout>-->
+        <!--<ProgressBar
+            android:id="@+id/sysProgressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <WebView
+            android:id="@+id/sysWebView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />-->
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
