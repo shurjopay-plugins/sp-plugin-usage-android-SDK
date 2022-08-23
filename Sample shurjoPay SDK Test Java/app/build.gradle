@@ -1,26 +1,16 @@
 plugins {
     id "com.android.application"
-    id "org.jetbrains.kotlin.android"
 }
 
 android {
     compileSdk 32
 
-    signingConfigs {
-        config {
-            storeFile file("../credential/KotlinShurjoPayTest.keystore")
-            keyAlias = "kotlin_shurjopay_test"
-            storePassword "shurj0Droid"
-            keyPassword "shurj0Droid"
-        }
-    }
-
     defaultConfig {
-        applicationId "com.sm.shurjopaykotlintest"
+        applicationId "com.example.testprojectapplication"
         minSdk 21
         targetSdk 32
-        versionCode 2
-        versionName "1.0.1"
+        versionCode 1
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -35,17 +25,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
     buildFeatures {
-        viewBinding true
+        viewBinding = true
     }
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
-    implementation "androidx.core:core-ktx:1.8.0"
+
     implementation "androidx.appcompat:appcompat:1.5.0"
     implementation "com.google.android.material:material:1.6.1"
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
