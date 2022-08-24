@@ -186,7 +186,7 @@ object : PaymentResultListener {
 
 ```git_request_data_model_setup
 // TODO request data model setup
-RequiredData data = RequiredData(
+RequiredData data = new RequiredData(
     username,
     password,
     prefix,
@@ -210,7 +210,7 @@ RequiredData data = RequiredData(
     value2,
     value3,
     value4
-)
+);
 ```
 
 ### Response Listener Setup:
