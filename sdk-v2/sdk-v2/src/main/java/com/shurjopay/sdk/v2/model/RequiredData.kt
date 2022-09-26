@@ -1,29 +1,31 @@
 package com.shurjopay.sdk.v2.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
-
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class RequiredData(
-  var username: String,
-  var password: String,
-  var prefix: String,
-  var currency: String,
-  var amount: Double,
-  var order_id: String,
-  var discount_amount: String?,
-  var disc_percent: Int?,
-  var customer_name: String,
-  var customer_phone: String,
-  var customer_email: String?,
-  var customer_address: String,
-  var customer_city: String,
-  var customer_state: String?,
-  var customer_postcode: String?,
-  var customer_country: String?,
-  var value1: String?,
-  var value2: String?,
-  var value3: String?,
-  var value4: String?
+    var username: String,
+    var password: String,
+    var prefix: String,
+    var currency: String,
+    var amount: Double,
+    var orderId: String,
+    var discountAmount: Double?,
+    var discPercent: Double?,
+    var customerName: String,
+    var customerPhone: String,
+    var customerEmail: String?,
+    var customerAddress: String,
+    var customerCity: String,
+    var customerState: String?,
+    var customerPostcode: String?,
+    var customerCountry: String?,
+    var returnUrl: String?,
+    var cancelUrl: String?,
+    var clientIp: String?,
+    var value1: String?,
+    var value2: String?,
+    var value3: String?,
+    var value4: String?
 ) : Parcelable

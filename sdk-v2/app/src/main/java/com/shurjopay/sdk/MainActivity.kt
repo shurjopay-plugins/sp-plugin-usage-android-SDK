@@ -2,18 +2,17 @@ package com.shurjopay.sdk
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.shurjopay.sdk.databinding.ActivityMainBinding
+import com.shurjopay.sdk.v2.model.ErrorSuccess
 import com.shurjopay.sdk.v2.model.RequiredData
-import com.shurjopay.sdk.v2.model.TransactionInfo
 import com.shurjopay.sdk.v2.payment.PaymentResultListener
 import com.shurjopay.sdk.v2.payment.ShurjoPaySDK
 import com.shurjopay.sdk.v2.utils.Constants
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
+    private val TAG = "MainActivity"
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,10 +27,10 @@ class MainActivity : AppCompatActivity() {
         val data = RequiredData(
             "sp_sandbox",
             "pyyk97hu&6u6",
-            "PPD",
+            "NOK",
             "BDT",
             binding.amountLayout.editText?.text.toString().toDouble(),
-            "PPD" + Random().nextInt(1000000),
+            "NOK" + Random().nextInt(1000000),
             null,
             null,
             binding.nameLayout.editText?.text.toString(),
@@ -42,10 +41,13 @@ class MainActivity : AppCompatActivity() {
             null,
             null,
             null,
-            null,
-            null,
-            null,
-            null
+            "https://www.sandbox.shurjopayment.com/response",
+            "https://www.sandbox.shurjopayment.com/response",
+            "127.0.0.1",
+            "value-of-1",
+            "value-of-2",
+            "value-of-3",
+            "value-of-4"
         )
 
         ShurjoPaySDK.instance?.makePayment(
@@ -53,22 +55,17 @@ class MainActivity : AppCompatActivity() {
             Constants.SDK_TYPE_SANDBOX,
             data,
             object : PaymentResultListener {
-                override fun onSuccess(transactionInfo: TransactionInfo?) {
-                    Log.d(TAG, "onSuccess: transactionInfo = $transactionInfo")
-                    Toast.makeText(
-                        this@MainActivity, "onSuccess: transactionInfo = " +
-                                transactionInfo, Toast.LENGTH_LONG
-                    ).show()
+                override fun onSuccess(errorSuccess: ErrorSuccess) {
+                    Log.d(TAG, "onSuccess: debugMessage = ${errorSuccess.debugMessage}")
                 }
 
-                override fun onFailed(message: String?) {
-                    Log.d(TAG, "onFailed: message = $message")
-                    Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()
+                override fun onFailed(errorSuccess: ErrorSuccess) {
+                    Log.d(TAG, "onFailed: debugMessage = ${errorSuccess.debugMessage}")
+                }
+
+                override fun onBackButtonListener(errorSuccess: ErrorSuccess): Boolean {
+                    return true
                 }
             })
-    }
-
-    companion object {
-        private const val TAG = "MainActivity"
     }
 }
