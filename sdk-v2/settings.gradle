@@ -7,5 +7,5 @@ dependencyResolutionManagement {
     }
 }
 //rootProject.name = "ShurjoPaySdkV2"
-include ':app'
-include ':sdk-v2'
+include ":app"
+include ":sdk-v2"
